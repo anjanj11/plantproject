@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+<form action ="plantorder" method="POST">
+ {% csrf_token %}
+    <input type="text" name="CustomerName" placeholder="Enter your Customer Name"><br>
+    <input type="text" name="PhoneNo" placeholder="Enter your Phone No"><br>
+    <input type="email" name="Email" placeholder="Enter your Email"><br>
+    <input type="text" name="Address" placeholder="Enter your Address"><br>
+
+    <label for="cars">Choose your district:</label>
+    <select id="multiple">
+    <option value="volvo">Ernakulam</option>
+      <option value="saab">edappally</option>
+    <option value="opel">kochi</option>
+    <option value="audi">kakanad</option><br>
+  </select>
+    <select name="multiple">
+      <option value="saab">Alappuzha</option>
+        <option value="volvo">arroor</option>
+      <optiogn value="saab">haripad</optiogn>
+    <option value="opel">mararikulam</option>
+    </select>
+    <select name="multiple">
+      <option value="saab">idukki</option>
+        <option value="volvo">munnar</option>
+      <option value="saab">adimali</option>
+    <option value="opel">marayoor</option>
+    </select>
+    <select name="multiple">
+      <option value="saab">kottayam</option>
+        <option value="volvo">pala</option>
+      <option value="saab">wagamon</option>
+    <option value="opel">karunagapaly</option>
+    </select>
+    <select name="multiple">
+      <option value="saab">thriuvanathapuram</option>
+        <option value="volvo">varkala</option>
+      <option value="saab">kanaykumari</option>
+    <option value="opel">venjaramood</option>
+    </select>
+    <select name="multiple">
+      <option value="saab">thrissur</option>
+        <option value="volvo">koratty</option>
+      <option value="saab">kodugalloor</option>
+    <option value="opel">guruvayoor</option>
+    </select>
+    <select name="multiple">
+      <option value="saab">wayanad</option>
+        <option value="volvo">lakaddi</option>
+      <option value="saab">edakkal</option>
+    <option value="opel">pookod</option>
+    </select>
+  <br><br>
+    </form>
+     <a href="{% url 'plantapp:shop'%}" class="btn btn-warning">Submit</a>
+
+
+</body>
+</html>
